@@ -1,0 +1,62 @@
+# linux utils
+socat xz-utils p7zip unzip curl wget rsync figlet cowsay rtorrent
+vim git subversion mercurial tmux zsh mosh tree emacs24 irssi xchat
+
+# system administration
+exfat-fuse exfat-utils ntfs-3g parted gparted sysstat htop rxvt-unicode lynx
+
+# services
+postgresql memcached redis-server redis-tools mongodb nginx vsftpd
+docker docker.io
+
+# desktop application
+vlc chromium-browser
+
+# programming languages
+## unfamiliar lang
+scala erlang
+
+## java
+openjdk-8-jre
+
+## c family
+llvm3.5 build-essential llvm-3.5 sysdig cmake
+
+## javscript
+javascript-common npm node
+
+## python
+python2 python-pip python-virtualenv
+python3
+
+## perl
+perl
+
+## ruby
+ruby
+
+## lua
+lua5.2
+
+## lisp family
+clisp racket guile-2.0
+
+## haskell
+ghc
+
+# fonts
+fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# graphic/ui
+graphicsmagick octave graphviz gimp inkscape
+
+# scienctific computing
+scilab
+
+## python
+libfreetype6-dev libpng12-dev libpng++-dev
+libblas-dev liblapack-dev gfortran
+ghostscript dvipng latex-beamer latex-cjk-common latex209-base
+
+# third party application
+pepperflashplugin-nonfree
