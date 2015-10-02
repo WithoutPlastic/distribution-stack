@@ -353,8 +353,13 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 # alias pacimpl="/usr/bin/pacman -D --asdep"  # 'mark as [impl]icit'  - mark one or more packages as non explicitly installed
 
 # Node Version Manager for Node.js application
-# . ~/workspace/github/nvm/nvm.sh
+#export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+# . ~/.nvm/nvm.sh
 # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+#alias cnpm="npm --registry=https://registry.npm.taobao.org \
+#    --cache=$HOME/.npm/.cache/cnpm \
+#    --disturl=https://npm.taobao.org/dist \
+#    --userconfig=$HOME/.cnpmrc"
 
 # Every Day Hints for Shell Commands
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
