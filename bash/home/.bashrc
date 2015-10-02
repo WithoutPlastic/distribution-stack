@@ -210,6 +210,11 @@ export PAGER=less
 # alias less=$PAGER
 # alias zless=$PAGER
 
+alias -g '...'='../..'
+alias -g '....'='../../..'
+alias -g '.....'='../../../..'
+alias -g '......'='../../../../..'
+
 ## Modified commands 
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
