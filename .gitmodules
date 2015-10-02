@@ -1,0 +1,33 @@
+[submodule "vim/home/.vim/bundle/YouCompleteMe"]
+	path = vim/home/.vim/bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule ".vim/home/.vim/bundle/Vundle.vim"]
+	path = vim/home/.vim/bundle/Vundle.vim
+	url = git@github.com:gmarik/Vundle.vim.git
+[submodule "vim/home/.vim/bundle/emmet-vim"]
+	path = vim/home/.vim/bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "vim/home/.vim/bundle/vim-coffee-script"]
+	path = vim/home/.vim/bundle/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "vim/home/.vim/bundle/tabular"]
+	path = vim/home/.vim/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/home/.vim/bundle/vim-lucius"]
+	path = vim/home/.vim/bundle/vim-lucius
+	url = git@github.com:jonathanfilip/vim-lucius.git
+[submodule "vim/home/.vim/bundle/vim-racket"]
+	path = vim/home/.vim/bundle/vim-racket
+	url = git@github.com:wlangstroth/vim-racket.git
+[submodule "vim/home/.vim/bundle/indentLine"]
+	path = vim/home/.vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule "vim/home/.vim/bundle/vim-markdown"]
+	path = vim/home/.vim/bundle/vim-markdown
+	url = git@github.com:gabrielelana/vim-markdown.git
+[submodule "vim/home/.vim/bundle/vim-less"]
+	path = vim/home/.vim/bundle/vim-less
+	url = git@github.com:groenewege/vim-less.git
+[submodule "vim/home/.vim/bundle/vim-javascript"]
+	path = vim/home/.vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
