@@ -175,6 +175,7 @@ alias -g '...'='../..'
 alias -g '....'='../../..'
 alias -g '.....'='../../../..'
 alias -g '......'='../../../../..'
+alias -g '.......'='../../../../../..'
 alias -g BG='& exit'
 #alias -g C='|wc -l'
 #alias -g G='|grep'
@@ -365,6 +366,8 @@ alias findrb='find ./ -maxdepth 5 -type f -name "*.rb" | xargs grep '
 
 alias findhtml='find ./ -maxdepth 5 -type f -name "*.html" | xargs grep '
 alias findjs='find ./ -maxdepth 5 -type f -name "*.js" | xargs grep '
+alias findes6='find ./ -maxdepth 5 -type f -name "*.es6" | xargs grep '
+alias findcoffee='find ./ -maxdepth 5 -type f -name "*.coffee" | xargs grep '
 alias findcss='find ./ -maxdepth 5 -type f -name "*.css" | xargs grep '
 
 alias findlsp='find ./ -maxdepth 5 -type f -name "*.lsp" | xargs grep '
@@ -391,6 +394,8 @@ alias efindrb='find ./ -maxdepth 5 -type f -name "*.rb" | xargs egrep '
 
 alias efindhtml='find ./ -maxdepth 5 -type f -name "*.html" | xargs egrep '
 alias efindjs='find ./ -maxdepth 5 -type f -name "*.js" | xargs egrep '
+alias efindes6='find ./ -maxdepth 5 -type f -name "*.es6" | xargs egrep '
+alias efindcoffee='find ./ -maxdepth 5 -type f -name "*.coffee" | xargs egrep '
 alias efindcss='find ./ -maxdepth 5 -type f -name "*.css" | xargs egrep '
 
 alias efindlsp='find ./ -maxdepth 5 -type f -name "*.lsp" | xargs egrep '
@@ -416,6 +421,9 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 #    --cache=$HOME/.npm/.cache/cnpm \
 #    --disturl=https://npm.taobao.org/dist \
 #    --userconfig=$HOME/.cnpmrc"
+
+## User Database PATH
+#export PATH=~/Database/mongodb-linux-x86_64-3.0.6/bin/:$PATH
 
 ## Customized by PaprikaZ
 ## Color predefination

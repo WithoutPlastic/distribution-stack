@@ -210,10 +210,10 @@ export PAGER=less
 # alias less=$PAGER
 # alias zless=$PAGER
 
-alias -g '...'='../..'
-alias -g '....'='../../..'
-alias -g '.....'='../../../..'
-alias -g '......'='../../../../..'
+alias '...'='../..'
+alias '....'='../../..'
+alias '.....'='../../../..'
+alias '......'='../../../../..'
 
 ## Modified commands 
 alias diff='colordiff'              # requires colordiff package
@@ -360,6 +360,9 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 #    --cache=$HOME/.npm/.cache/cnpm \
 #    --disturl=https://npm.taobao.org/dist \
 #    --userconfig=$HOME/.cnpmrc"
+
+# User Database PATH
+#export ~/Database/mongodb-linux-x86_64-3.0.6/bin/:$PATH
 
 # Every Day Hints for Shell Commands
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
