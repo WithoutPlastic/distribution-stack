@@ -368,3 +368,6 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
 # For Host with Cowsay Installed
 # cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1 | cut -d. -f1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)
+
+# added by Anaconda3 2.3.0 installer
+#export PATH="/home/paprikaz/anaconda3/bin:$PATH"
