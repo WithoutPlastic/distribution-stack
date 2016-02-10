@@ -364,6 +364,9 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 # User Database PATH
 #export ~/Database/mongodb-linux-x86_64-3.0.6/bin/:$PATH
 
+# User Message Queue PATH
+#export PATH=~/MQ/rabbitmq_server-3.5.6/sbin/:$PATH
+
 # Every Day Hints for Shell Commands
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
 # For Host with Cowsay Installed
