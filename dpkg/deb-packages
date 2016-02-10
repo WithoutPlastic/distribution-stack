@@ -10,53 +10,78 @@ postgresql memcached redis-server redis-tools mongodb nginx vsftpd
 docker docker.io
 
 # desktop application
-vlc chromium-browser
+## gnome desktop
+dconf-tools
+
+## ftp client
+filezilla
+
+## video player
+vlc mplayer2
+
+## video codec
+ffmpeg
+
+## browser
+chromium-browser
+
+## input device sharing
+synergy
 
 # programming languages
-## unfamiliar lang
-scala erlang
+## erlang family and its sucessor
+erlang elixir
 
-## java
-openjdk-8-jre
+## java family and its sucessor
+openjdk-8-jre scala
 
-## c family
+## c/c++ family
 llvm3.5 build-essential llvm-3.5 sysdig cmake
 
-## javscript
+## javscript family
 javascript-common npm node
 
-## python
+### nodejs
+libkrb5-dev
+
+## python family
 python2 python-pip python-virtualenv
 python3
 
-## perl
+### python package
+libfreetype6-dev libpng12-dev libpng++-dev
+libblas-dev liblapack-dev gfortran
+ghostscript dvipng latex-beamer latex-cjk-common latex209-base
+
+## perl family
 perl
 
-## ruby
+## ruby family
 ruby
 
-## lua
-lua5.2
+## lua family
+lua5.2 lua5.3
 
 ## lisp family
 clisp racket guile-2.0
 
-## haskell
+## haskell family
 ghc
 
 # fonts
 fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
 
 # graphic/ui
-graphicsmagick octave graphviz gimp inkscape
+graphicsmagick octave graphviz gimp inkscape gthumb
+
+# google webp format
+libwebp5
 
 # scienctific computing
 scilab
 
-## python
-libfreetype6-dev libpng12-dev libpng++-dev
-libblas-dev liblapack-dev gfortran
-ghostscript dvipng latex-beamer latex-cjk-common latex209-base
-
 # third party application
 pepperflashplugin-nonfree
+
+# ebook
+calibre
