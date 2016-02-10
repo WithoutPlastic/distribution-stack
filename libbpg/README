@@ -1,0 +1,13 @@
+sudo apt-get install build-essential zlibc zlib1g zlib1g-dev libsdl1.2-dev libsdl-image1.2-dev
+
+wget http://download.sourceforge.net/libpng/libpng-1.6.18.tar.gz
+tar -xvzf libpng-1.6.18.tar.gz
+cd libpng-1.6.18
+./configure --prefix=/usr
+make check
+make install
+cd ..
+cd libbpg-0.9.6
+<edit MakeFile >
+make -j 4
+make install
