@@ -1,6 +1,6 @@
 # linux utils
-socat xz-utils p7zip unzip curl wget rsync figlet cowsay rtorrent
-vim git subversion mercurial tmux zsh mosh tree emacs24 irssi xchat
+ssh geomview socat xz-utils p7zip unzip curl wget rsync figlet cowsay rtorrent
+vim git subversion mercurial tmux zsh mosh tree emacs24 irssi xchat-gnome
 
 # system administration
 exfat-fuse exfat-utils ntfs-3g parted gparted sysstat htop rxvt-unicode lynx
@@ -17,7 +17,7 @@ dconf-tools
 filezilla
 
 ## video player
-vlc mplayer2
+vlc mplayer
 
 ## video codec
 ffmpeg
@@ -28,15 +28,18 @@ chromium-browser
 ## input device sharing
 synergy
 
+## network data capture
+wireshark
+
 # programming languages
 ## erlang family and its sucessor
 erlang elixir
 
 ## java family and its sucessor
-openjdk-8-jre scala
+openjdk-8-jre openjdk-9-jre scala
 
 ## c/c++ family
-llvm3.5 build-essential llvm-3.5 sysdig cmake
+build-essential llvm-3.8 sysdig cmake
 
 ## javscript family
 javascript-common npm node
@@ -85,3 +88,7 @@ pepperflashplugin-nonfree
 
 # ebook
 calibre
+
+# geographic tools
+gmt
+gdal-bin
