@@ -12,6 +12,9 @@ docker docker.io
 # desktop application
 vlc chromium-browser
 
+# hardware monitor
+psensor
+
 # programming languages
 ## unfamiliar lang
 scala erlang
