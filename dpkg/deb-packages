@@ -31,6 +31,9 @@ synergy
 ## network data capture
 wireshark
 
+# hardware monitor
+psensor
+
 # programming languages
 ## erlang family and its sucessor
 erlang elixir
