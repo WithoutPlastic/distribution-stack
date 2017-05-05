@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-## Custmoized by Zhu Jie
+## Custmoized
 ## Color predefination
 # Reset
 Color_Off='\e[0m'       # Text Reset
@@ -220,6 +220,7 @@ alias '...'='../..'
 alias '....'='../../..'
 alias '.....'='../../../..'
 alias '......'='../../../../..'
+alias '.......'='../../../../../..'
 
 ## Modified commands 
 alias diff='colordiff'              # requires colordiff package

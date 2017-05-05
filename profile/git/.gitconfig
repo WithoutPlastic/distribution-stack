@@ -1,7 +1,7 @@
 [user]
-	name = PaprikaZ
-	mail = sms.extreme@gmail.com
-	email = sms.extreme@gmail.com
+    name = PaprikaZ
+    mail = sms.extreme@gmail.com
+    email = sms.extreme@gmail.com
 [core]
     editor = vim
     pager = /usr/bin/less
