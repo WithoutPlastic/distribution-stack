@@ -1,1 +1,26 @@
-coffee-script babel gulp
+// all in global
+
+// functional programming
+lodash
+
+// automaker
+gulp
+
+// compiler
+babel
+babel-core
+babel-eslint
+babel-preset-env
+babel-preset-es2015
+babel-preset-es2015
+babel-preset-stage-2
+
+// view model framework
+vue
+vue-cli
+
+// client packer
+webpack
+
+// shell
+shelljs

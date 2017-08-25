@@ -1,12 +1,28 @@
 # linux utils
 ssh geomview socat xz-utils p7zip unzip curl wget rsync figlet cowsay rtorrent
-vim git subversion mercurial tmux zsh mosh tree emacs24 irssi xchat-gnome
+vim git subversion mercurial tmux zsh mosh tree emacs24 irssi xchat-gnome xclip
 
 # system administration
-exfat-fuse exfat-utils ntfs-3g parted gparted sysstat htop rxvt-unicode lynx
+exfat-fuse exfat-utils ntfs-3g parted gparted sysstat htop rxvt-unicode lynx mtr
+iperf
 
 # services
-postgresql memcached redis-server redis-tools mongodb nginx vsftpd
+## web
+icoutils libssl-dev nginx
+
+## sql database
+postgresql
+
+## no sql databse
+mongodb
+
+## cache
+memcached redis-server redis-tools
+
+## ftp
+vsftpd
+
+## container
 docker docker.io
 
 # desktop application
@@ -76,6 +92,9 @@ ghc
 
 # fonts
 fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# unicode
+uniutils
 
 # graphic/ui
 graphicsmagick octave graphviz gimp inkscape gthumb
