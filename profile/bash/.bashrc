@@ -361,12 +361,15 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 
 # Node Version Manager for Node.js application
 #export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
-# . ~/.nvm/nvm.sh
-# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
 #alias cnpm="npm --registry=https://registry.npm.taobao.org \
 #    --cache=$HOME/.npm/.cache/cnpm \
 #    --disturl=https://npm.taobao.org/dist \
 #    --userconfig=$HOME/.cnpmrc"
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # User Database PATH
 #export ~/Database/mongodb-linux-x86_64-3.0.6/bin/:$PATH
