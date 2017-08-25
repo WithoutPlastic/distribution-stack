@@ -109,7 +109,7 @@ if has('mouse')
   set mouse=v       " Enable the use of the mouse, copy and paste is enable
 endif
 
-" Added Zhu Jie administrator
+" Added administrator
 " take a reference to archlinux official wiki
 set backupdir=~/.vim/backup,/tmp
 "set noswapdile
@@ -157,6 +157,9 @@ filetype off
 " Activating local plugins
 " let Vundle manage Vundle, required
 "Plugin 'file:///home/<username>/.vim/bundle/Vundle.vim'
+
+" Vue support
+"Plugin 'posva/vim-vue'
 
 " rust support
 "Plugin 'file:///home/<username>/.vim/bundle/rust'
