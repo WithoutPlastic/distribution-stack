@@ -13,7 +13,7 @@
     branch = auto
     ui = auto
 [alias]
-    st = status
+    st = status -s
     ci = commit
     df = diff
     co = checkout
@@ -32,3 +32,5 @@
     gpgsign = true
 [tag]
     gpgsign = true
+[gpg]
+    program = gpg2
