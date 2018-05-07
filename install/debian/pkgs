@@ -111,6 +111,9 @@ pepperflashplugin-nonfree
 # ebook
 calibre
 
+# crypto
+libdigest-sha3-perl
+
 # geographic tools
 gmt
 gdal-bin
