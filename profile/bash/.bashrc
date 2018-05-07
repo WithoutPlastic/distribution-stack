@@ -371,16 +371,22 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# User Database PATH
-#export ~/Database/mongodb-linux-x86_64-3.0.6/bin/:$PATH
+## Add User Language PATH
+#export PATH="/path/to/language/bin:$PATH"
 
-# User Message Queue PATH
-#export PATH=~/MQ/rabbitmq_server-3.5.6/sbin/:$PATH
+## Add User Cache PATH
+#export PATH="/path/to/cache/bin:$PATH"
+
+## Add User Database PATH
+#export PATH="/path/to/database/bin:$PATH"
+
+## Add User Message Queue PATH
+#export PATH="/path/to/message-queue/bin:$PATH"
+
+## Add User Anaconda PATH
+#export PATH="/path/to/anaconda3/bin:$PATH"
 
 # Every Day Hints for Shell Commands
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
 # For Host with Cowsay Installed
 # cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1 | cut -d. -f1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)
-
-# added by Anaconda3 2.3.0 installer
-#export PATH="/home/paprikaz/anaconda3/bin:$PATH"
