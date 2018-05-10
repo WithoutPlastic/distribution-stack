@@ -527,3 +527,7 @@ On_IWhite='\e[0;107m'   # White
 
 ## grml zshrc default grml theme personal config
 zstyle ':prompt:grml:*:items:percent' pre $'\n'
+
+# GPG and git workaround
+# ref: https://github.com/keybase/keybase-issues/issues/2798
+#export GPG_TTY=$(tty)

@@ -390,3 +390,7 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # whatis/makewhatis needed
 # For Host with Cowsay Installed
 # cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1 | cut -d. -f1) $(whatis $(ls /bin) 2>/dev/null | shuf -n 1)
+
+# GPG and git workaround
+# ref: https://github.com/keybase/keybase-issues/issues/2798
+#export GPG_TTY=$(tty)
