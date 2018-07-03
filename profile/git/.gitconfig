@@ -1,7 +1,7 @@
 [user]
-    name = PaprikaZ
-    mail = sms.extreme@gmail.com
-    email = sms.extreme@gmail.com
+    name = <your name>
+    mail = <your email address>
+    email = <your email address>
     signingKey = <gpg-key>
 [core]
     editor = vim
