@@ -1,0 +1,101 @@
+# remote control
+synergy ssh 
+
+# compression
+xz-utils p7zip unzip 
+
+# transmission centric 
+wget rsync socat 
+
+# transmission p2p
+rtorrent transmission 
+
+# web
+curl icoutils libssl-dev nginx
+
+# useless but fun
+cowsay figlet 
+
+# editor
+vim emacs24 
+
+# version control
+git subversion mercurial 
+
+# shell / terminal
+tmux zsh mosh rxvt-unicode 
+
+# system admin
+sysstat htop
+
+# instant message
+irssi xchat-gnome 
+
+# desktop
+xclip dconf-tools
+
+# disk / filesystem
+tree exfat-fuse exfat-utils ntfs-3g parted gparted
+
+# database sql
+postgresql
+
+# database no-sql
+mongodb
+
+# cache
+memcached redis-server redis-tools
+
+# ftp
+vsftpd cftp lftp filezilla
+
+# container
+docker docker.io
+
+# media player
+vlc mplayer pepperflashplugin-nonfree
+
+# codecs
+libwebp5 ffmpeg
+
+# browser
+firefox chromium-browser lynx 
+
+# network
+wireshark iperf mtr 
+
+# hardware
+psensor
+
+# programming lang
+ghc
+perl
+ruby
+lua5.2 lua5.3
+erlang elixir
+clisp racket guile-2.0
+openjdk-8-jre openjdk-9-jre scala
+build-essential llvm-3.8 sysdig cmake
+javascript-common npm node libkrb5-dev
+python2 python-pip python-virtualenv python3
+
+# unicode
+uniutils
+
+# fonts
+fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# computing
+scilab
+
+# ebook
+calibre
+
+# geographic tools
+gmt gdal-bin
+
+# crypto
+libdigest-sha3-perl
+
+# graphic
+geomview graphicsmagick octave graphviz gimp inkscape gthumb
