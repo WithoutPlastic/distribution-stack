@@ -1,0 +1,74 @@
+# shell / terminal
+zsh bash tmux mosh rxvt-unicode st
+
+# system management
+htop
+
+# editor
+vim gedit nano
+
+# compression
+unzip p7zip p7zip-rar bzip xz
+
+# build utils / c family
+llvm gmake cmake rust rust-doc lua
+boost
+
+# programming language
+python2 python perl node ghc ocaml jre jdk racket-minimal go erlang elixir clisp
+
+# unicode / emoji / fonts
+uniutils
+ubuntu-fonts js-fonts-gnu
+noto-fonts noto-cjk noto-emoji
+zh-wqy-zenhei-ttf zh-wqy-bitmapfont
+
+# instant message
+weechat irssi-icb irssi-otr
+
+# browser
+firefox chromium
+
+# digest
+
+# codecs
+libpng libjpeg libtiff libxz libxml libwebp ffmpeg 
+
+# vision
+gimp graphviz inkscape feh
+
+# multi media player
+vlc mplayer
+
+# db/cache/mq
+postgresql sqlite memcached redis mongodb rabbitmq
+
+# web
+nginx icoutils
+
+# network
+rsync curl wget nmap tshark wireshark iperf3
+
+# p2p / download
+transmission filezilla vsftpd
+
+# version control
+git subversion mercurial 
+
+# security
+signify gnutls gnupg
+
+# anonymous
+v.i2p
+
+# proxy
+v.v2ray v.shadowsocks
+
+# document
+evince
+
+# ascii
+figlet cowsay
+
+# desktop / X
+conky synergy xclip scrot 
