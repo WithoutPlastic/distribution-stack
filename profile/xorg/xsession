@@ -1,0 +1,9 @@
+# Optional set default locale if not utf-8
+#export LC_CTYPE="en_US.UTF-8"
+
+# Use feh to set wallpaper
+#~/.fehbg <path-to-wallpaper>
+
+# Run window manager at last
+# on openBSD
+#cwm
