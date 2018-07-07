@@ -1,0 +1,2 @@
+# append to system default
+export LC_CTYPE="en_US.UTF-8"

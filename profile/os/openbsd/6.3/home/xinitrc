@@ -1,0 +1,7 @@
+export LC_CTYPE="en_US.UTF-8"
+
+xsetroot -solid '#252525'
+~/.fehbg &
+sct &
+xscreensaver &
+exec cwm
