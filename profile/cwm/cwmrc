@@ -1,0 +1,148 @@
+fontname "Noto Sans CJK SC:style=Regular:pixelsize=16"
+
+sticky yes
+
+gap 0 0 0 0
+
+snapdist 10
+
+borderwidth 2
+
+moveamount 1
+
+#ignore 
+
+command term "st -e tmux"
+command lock "xlock"
+#command lock "xscreensaver-command -lock"
+
+
+command "GEdit" "gedit"
+command "Firefox" "firefox"
+command "Chrome" "chrome"
+
+color urgencyborder "#48c6ff"
+
+color groupborder "#215d9c"
+color ungroupborder "#ff005b"
+
+color activeborder "#eeeeec"
+color inactiveborder "#1c1c1c"
+
+color font "#bcbdbc"
+color selfont "#eeeeec"
+color menubg "#1c1c1c"
+color menufg "#215d9c"
+
+#autogroup "conky,SystemMonitor"
+#autogroup "xterm,Terminal"
+#autogroup "urxvt,Terminal"
+#autogroup "st,Terminal"
+#autogroup "chromium,Browser"
+#autogroup "firefox,Browser"
+#autogroup "gedit,Editor"
+#autogroup "gimp,GraphicEditor"
+#autogroup "inkscape,GraphicEditor"
+#autogroup "transmission,TorrentClient"
+#autogroup "vlc,MediaPlayer"
+#autogroup "mplayer,MediaPlayer"
+
+unbind-key all
+#unbind-mouse all
+
+bind-key CMS-q quit
+bind-key CMS-r restart
+
+bind-key CM-l lock
+bind-key CM-Return terminal
+
+bind-key M-s menu-window
+bind-key MS-s menu-window-hidden
+bind-key M-c menu-cmd
+#bind-key M-g menu-group
+#bind-key menu-exec-wm
+bind-key M-e menu-exec
+bind-key M-h menu-ssh
+bind-key M-g window-group
+
+bind-key 4M-1 group-only-1
+bind-key 4M-2 group-only-2
+bind-key 4M-3 group-only-3
+bind-key 4M-4 group-only-4
+bind-key 4M-5 group-only-5
+bind-key 4M-6 group-only-6
+bind-key 4M-7 group-only-7
+bind-key 4M-8 group-only-8
+bind-key 4M-9 group-only-9
+#bind-key group-toggle-all
+bind-key 4S-1 group-toggle-1
+bind-key 4S-2 group-toggle-2
+bind-key 4S-3 group-toggle-3
+bind-key 4S-4 group-toggle-4
+bind-key 4S-5 group-toggle-5
+bind-key 4S-6 group-toggle-6
+bind-key 4S-7 group-toggle-7
+bind-key 4S-8 group-toggle-8
+bind-key 4S-9 group-toggle-9
+bind-key 4MS-1 window-movetogroup-1
+bind-key 4MS-2 window-movetogroup-2
+bind-key 4MS-3 window-movetogroup-3
+bind-key 4MS-4 window-movetogroup-4
+bind-key 4MS-5 window-movetogroup-5
+bind-key 4MS-6 window-movetogroup-6
+bind-key 4MS-7 window-movetogroup-7
+bind-key 4MS-8 window-movetogroup-8
+bind-key 4MS-9 window-movetogroup-9
+bind-key 4M-Tab group-cycle
+bind-key 4MS-Tab group-rcycle
+bind-key 4-Tab window-cycle
+bind-key 4S-Tab window-rcycle
+#bind-key window-cycle-ingroup
+#bind-key window-rcycle-ingroup
+bind-key 4-x window-delete
+bind-key 4-h window-hide
+bind-key 4-q window-raise
+bind-key 4-a window-lower
+#bind-key window-menu-label
+bind-key 4-z window-freeze
+bind-key 4-s window-stick
+bind-key 4-f window-fullscreen
+bind-key 4-k window-maximize
+bind-key 4-minus window-vmaximize
+bind-key 4-equal window-hmaximize
+bind-key 4S-minus window-htile
+bind-key 4S-equal window-vtile
+bind-mouse M-1 window-move
+bind-mouse M-3 window-resize
+bind-key 4-Up window-move-up
+bind-key 4-Down window-move-down
+bind-key 4-Left window-move-left
+bind-key 4-Right window-move-right
+bind-key 4S-Up window-move-up-big
+bind-key 4S-Down window-move-down-big
+bind-key 4S-Left window-move-left-big
+bind-key 4S-Right window-move-right-big
+bind-key 4M-Up window-resize-up
+bind-key 4M-Down window-resize-down
+bind-key 4M-Left window-resize-left
+bind-key 4M-Right window-resize-right
+bind-key 4MS-Up window-resize-up-big
+bind-key 4MS-Down window-resize-down-big
+bind-key 4MS-Left window-resize-left-big
+bind-key 4MS-Right window-resize-right-big
+bind-key 4-i window-snap-up
+bind-key 4-comma window-snap-down
+bind-key 4-j window-snap-left
+bind-key 4-l window-snap-right
+bind-key 4-u window-snap-up-left
+bind-key 4-o window-snap-up-right
+bind-key 4-m window-snap-down-left
+bind-key 4-period window-snap-down-right
+bind-key M-Up pionter-move-up
+bind-key M-Down pionter-move-down
+bind-key M-Left pionter-move-left
+bind-key M-Right pionter-move-right
+bind-key MS-Up pionter-move-up-big
+bind-key MS-Down pionter-move-down-big
+bind-key MS-Left pionter-move-left-big
+bind-key MS-Right pionter-move-right-big
