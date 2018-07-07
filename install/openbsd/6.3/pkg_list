@@ -2,7 +2,10 @@
 zsh bash tmux mosh rxvt-unicode st
 
 # system management
-htop
+htop tree
+
+# input method
+fcitx fcitx-gtk3 fcitx-qt4
 
 # editor
 vim gedit nano
@@ -27,7 +30,7 @@ zh-wqy-zenhei-ttf zh-wqy-bitmapfont
 weechat irssi-icb irssi-otr
 
 # browser
-firefox chromium
+firefox chromium lynx
 
 # digest
 
@@ -44,7 +47,7 @@ vlc mplayer
 postgresql sqlite memcached redis mongodb rabbitmq
 
 # web
-nginx icoutils
+nginx darkhttpd icoutils
 
 # network
 rsync curl wget nmap tshark wireshark iperf3
@@ -71,4 +74,4 @@ evince
 figlet cowsay
 
 # desktop / X
-conky synergy xclip scrot 
+sct xscreensaver xlock xautolock conky synergy xclip scrot 
