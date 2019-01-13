@@ -11,7 +11,7 @@ wget rsync socat
 rtorrent transmission 
 
 # web
-curl icoutils libssl-dev nginx
+curl icoutils libssl-dev nginx nghttp2-client
 
 # useless but fun
 cowsay figlet 
@@ -99,3 +99,9 @@ libdigest-sha3-perl
 
 # graphic
 geomview graphicsmagick octave graphviz gimp inkscape gthumb
+
+# cross platform runtime
+snap
+
+# cloud service utils
+snap:heroku
