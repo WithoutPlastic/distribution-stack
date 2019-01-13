@@ -1,0 +1,105 @@
+# remote control
+synergy ssh
+
+# compression
+xz-utils p7zip unzip
+
+# transmission centric
+wget rsync socat
+
+# transmission p2p
+rtorrent transmission
+
+# web
+curl icoutils libssl-dev nginx lighttpd
+
+# useless but fun
+cowsay figlet
+
+# editor
+vim emacs25
+
+# version control
+git subversion mercurial
+
+# shell / terminal
+tmux zsh mosh rxvt-unicode
+
+# system admin
+sysstat htop
+
+# instant message
+irssi xchat-gnome
+
+# desktop
+xclip dconf-tools
+
+# disk / filesystem
+tree exfat-fuse exfat-utils ntfs-3g parted gparted
+
+# database sql
+postgresql
+
+# database no-sql
+mongodb
+
+# cache
+memcached redis-server redis-tools
+
+# ftp
+vsftpd lftp filezilla
+
+# container
+docker docker.io
+
+# media player
+vlc mplayer pepperflashplugin-nonfree
+
+# codecs
+libwebp6 ffmpeg
+
+# browser
+firefox chromium-browser lynx
+
+# network
+wireshark tshark iperf mtr
+
+# hardware
+psensor
+
+# programming lang
+ghc
+perl
+ruby
+lua5.2 lua5.3
+erlang elixir
+clisp racket guile-2.2
+openjdk-11-jre scala
+build-essential llvm-6.0 sysdig cmake
+javascript-common npm nodejs
+python3.7
+
+# unicode
+uniutils
+
+# fonts
+fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# computing
+scilab
+
+# ebook
+calibre
+
+# geographic tools
+gmt gdal-bin
+
+# crypto
+libdigest-sha3-perl
+
+# graphic
+geomview graphicsmagick octave graphviz gimp inkscape gthumb
+
+# input method
+# Gnome 3/Wayland not support fcitx
+#fcitx fcitx-pinyin fcitx-libpinyin fcitx-anthy
