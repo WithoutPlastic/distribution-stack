@@ -1,0 +1,4 @@
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but any other modifications may be lost.
+#deb http://binaries.erlang-solutions.com/debian bionic contrib
+deb https://mirrors.tuna.tsinghua.edu.cn/erlang-solutions/ubuntu/ bionic contrib
