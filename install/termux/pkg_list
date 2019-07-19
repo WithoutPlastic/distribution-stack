@@ -1,0 +1,23 @@
+# transmission
+netcat curl wget rsync
+
+# build
+make clang
+
+# editor
+vim
+
+# remote control
+openssh mosh 
+
+# archive / compression
+tar xz-utils p7zip zip unzip
+
+# repository
+git
+
+# language
+python nodejs
+
+# shell
+bash zsh
