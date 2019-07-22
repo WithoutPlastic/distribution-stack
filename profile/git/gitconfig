@@ -1,8 +1,8 @@
 [user]
     name = <your name>
     mail = <your email address>
-    email = <your email address>
-    signingKey = <gpg-key>
+    email = <your email address> #16 character recommended
+    signingkey = <gpg-key>
 [core]
     editor = vim
     pager = /usr/bin/less
@@ -33,7 +33,8 @@
 [tag]
     gpgsign = true
 [gpg]
-    program = gpg2
+    program = gpg
+    #program = gpg2
 # ref: https://github.com/keybase/keybase-issues/issues/2798
 # on gpg error 'gpg: signing failed: Inappropriate ioctl for device'
 # do `export GPG_TTY=$(tty)`
