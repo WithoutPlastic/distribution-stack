@@ -19,6 +19,9 @@ cowsay figlet
 # editor
 vim emacs25
 
+#package manager
+apt-transport-manager
+
 # version control
 git subversion mercurial
 
