@@ -394,3 +394,11 @@ alias efindall='find ./ -maxdepth 5 -type f | xargs egrep '
 # GPG and git workaround
 # ref: https://github.com/keybase/keybase-issues/issues/2798
 #export GPG_TTY=$(tty)
+
+# rustup source provided by ustc
+#export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+#export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
+#
+# rustup bash completions
+#mkdir -p ~/.local/share/bash-completion/completions/rustup
+#rustup completions bash > ~/.local/share/bash-completion/completions/rustup
