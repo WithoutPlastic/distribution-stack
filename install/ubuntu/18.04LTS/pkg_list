@@ -27,6 +27,7 @@ git subversion mercurial
 
 # shell / terminal
 tmux zsh mosh rxvt-unicode
+fish from ppa:fish-shell/release-3
 
 # system admin
 sysstat htop
@@ -60,6 +61,8 @@ vlc mplayer pepperflashplugin-nonfree
 
 # codecs
 libwebp6 ffmpeg
+
+libheif-tools libheif-dev from ppa:strukturag/libheif
 
 # browser
 firefox chromium-browser lynx
