@@ -28,6 +28,7 @@ git subversion mercurial
 # shell / terminal
 tmux zsh mosh rxvt-unicode
 fish from ppa:fish-shell/release-3
+github.com/elves/elvish
 
 # system admin
 sysstat htop
