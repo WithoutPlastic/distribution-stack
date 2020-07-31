@@ -320,8 +320,10 @@ autocmd Filetype javascript inoremap [ []<Left>
 autocmd FileType javascript inoremap " ""<Left>
 autocmd FileType javascript inoremap ' ''<Left>
 
-" Javascript ES6
+" ECMAScript/Javascript ES2015/2016/2017/2018/2019/2020
+autocmd BufRead,BufNewFile *.es setlocal filetype=javascript
 autocmd BufRead,BufNewFile *.es6 setlocal filetype=javascript
+autocmd BufRead,BufNewFile *.es7 setlocal filetype=javascript
 
 " Coffeescript
 autocmd FileType coffee setlocal foldmethod=indent
