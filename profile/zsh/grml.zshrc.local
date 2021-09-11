@@ -558,3 +558,11 @@ zstyle ':prompt:grml:*:items:percent' pre $'\n'
 # rustup zsh completions
 #mkdir -p ~/.zfunc
 #rustup completions bash > ~/.zfunc/_rustup
+
+# pyenv
+#echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+#echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+#
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
