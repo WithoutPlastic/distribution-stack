@@ -1,0 +1,112 @@
+# remote control
+synergy ssh
+
+# compression
+xz-utils p7zip unzip
+
+# transmission centric
+wget rsync socat
+
+# transmission p2p
+rtorrent transmission
+
+# web
+curl icoutils libssl-dev nginx lighttpd
+
+# useless but fun
+cowsay figlet
+
+# editor
+vim emacs
+
+# version control
+git subversion mercurial
+
+# shell / terminal
+tmux zsh mosh rxvt-unicode
+fish from ppa:fish-shell/release-3
+
+# system admin
+sysstat htop
+
+# instant message
+irssi xchat-gnome
+
+# desktop
+xclip
+
+# disk / filesystem
+tree exfat-fuse exfat-utils ntfs-3g parted gparted
+
+# database sql
+postgresql
+
+# database no-sql
+mongodb
+
+# cache
+memcached redis-server redis-tools
+
+# ftp
+vsftpd lftp filezilla
+
+# container
+docker docker.io
+
+# media player
+vlc mplayer pepperflashplugin-nonfree
+
+# codecs
+libwebp6 libheif1 ffmpeg
+
+libheif-tools libheif-dev from ppa:strukturag/libheif
+
+# browser
+firefox chromium-browser lynx
+
+# network
+wireshark tshark iperf mtr
+
+# hardware
+psensor
+
+# programming lang
+ghc
+perl
+ruby
+lua5.2 lua5.3
+erlang elixir
+clisp racket guile-3.0
+openjdk-16-jre scala
+build-essential llvm-12 sysdig cmake strace
+
+javascript-common npm nodejs
+
+python3.9 
+make libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev 
+libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# unicode
+uniutils
+
+# fonts
+fonts-noto-cjk fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# computing
+scilab
+
+# ebook
+calibre
+
+# geographic tools
+gmt gdal-bin
+
+# crypto
+libdigest-sha3-perl hashalot
+
+# graphic
+geomview graphicsmagick octave graphviz gimp inkscape gthumb
+
+# input method
+# Gnome 3/Wayland not support fcitx
+#fcitx fcitx-pinyin fcitx-libpinyin fcitx-anthy
