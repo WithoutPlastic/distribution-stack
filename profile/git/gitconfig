@@ -35,6 +35,8 @@
 [gpg]
     program = gpg
     #program = gpg2
+[init]
+	defaultBranch = main
 # ref: https://github.com/keybase/keybase-issues/issues/2798
 # on gpg error 'gpg: signing failed: Inappropriate ioctl for device'
 # do `export GPG_TTY=$(tty)`
