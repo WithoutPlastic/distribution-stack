@@ -6,6 +6,7 @@
 [core]
     editor = vim
     pager = /usr/bin/less
+    whitespace = cr-at-eol
     #excludesfile = ~/.gitignore
 [color]
     diff = auto
