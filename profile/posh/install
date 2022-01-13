@@ -1,0 +1,3 @@
+#with dependency of git-windows
+posh-git 
+https://github.com/dahlbyk/posh-git
