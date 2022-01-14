@@ -22,13 +22,13 @@ The argument bypass to avifenc -yuv.
 
 .EXAMPLE
 .\Encode.AvifBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
-	-InputDirectory D:\Path\To\Input -OutputDirectory D:\Path\To\Output 
+	-InputDirectory D:\Path\To\Input -OutputDirectory D:\Path\To\Output
 	
 
 .EXAMPLE
-.\Encode.AvifBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif 
+.\Encode.AvifBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
 	-InputDirectory D:\Path\To\Input -OutputDirectory D:\Path\To\Output
-	-EncodingWorkderThreadNumber 4 -EncoderSpeed 4 
+	-EncodingWorkderThreadNumber 4 -EncoderSpeed 4
 #>
 param (
 	[Parameter(Mandatory=$True)]
@@ -80,23 +80,24 @@ function PredicateOutputDirectoryEmpty {
 
 function PredicatePrerequiste {
 	if (-not (IsEncodingExecutionFilePathValid)) {
-		Write-Host 'The argument EncodingUtilityDirectory invalid'; return
+		Write-Host 'The argument EncodingUtilityDirectory invalid'; return $False
 	}
 	if (-not (IsInputDirectoryValid)) {
-		Write-Host 'The argument InputDirectory invalid'; return
+		Write-Host 'The argument InputDirectory invalid'; return $False
 	}
 	if (-not (IsOutputDirectoryValid)) {
-		Write-Host 'The argument OutputDirectory invalid'; return
+		Write-Host 'The argument OutputDirectory invalid'; return $False
 	}
 	if (-not (PredicateEncodingExecutionFileExist)) {
-		Write-Host "The encoding execution file $encodingExecutionFilePath not exist"; return
+		Write-Host "The encoding execution file $encodingExecutionFilePath not exist"; return $False
 	}
 	if (-not (PredicateInputDirectoryExist)) {
-		Write-Host "The input directory $inputDirectoryPath not exist"; return
+		Write-Host "The input directory $inputDirectoryPath not exist"; return $False
 	}
 	if ((PredicateOutputDirectoryExist) -and (-not (PredicateOutputDirectoryEmpty))) {
-		Write-Host "The output directory $outputDirectoryPath exist and not empty, abort in case of overwritten"; return
+		Write-Host "The output directory $outputDirectoryPath exist and not empty, abort in case of overwritten"; return $False
 	}
+	return $True
 }
 
 function GetProgressTaskNumberTotal {
@@ -120,7 +121,8 @@ function DoEncodingChildDirectory {
 	)
 
 	if (-not (Test-Path -Path $outputDirectoryPath)) {
-		New-Item -Path $outputDirectoryPath -ItemType Directory
+		New-Item -Path $outputDirectoryPath -ItemType Directory | Out-Null
+		Write-Host "New directory $outputDirectoryPath created"
 	}
 
 	Get-ChildItem -Path $inputDirectoryPath -File -Recurse |
@@ -128,18 +130,22 @@ function DoEncodingChildDirectory {
 	ForEach-Object {
 		$fromFilePath = $_.FullName
 		$relativeFilePath = [IO.Path]::GetRelativePath($inputDirectoryPath, $fromFilePath)
+		$relativeFilePathWithoutFileNameExtension = $relativeFilePath.Substring(0, $relativeFilePath.Length - 4)
 		$toFilePath = `
-			$relativeFilePath |
+			"$relativeFilePathWithoutFileNameExtension.avif" |
 			Select-Object @{name='ChildPath';expression={$_}} |
 			Join-Path -Path $outputDirectoryPath
-		$encodeFileCommand = 
+		$encodeFileCommand =
 			"$encodingExecutionFilePath" +`
 			" --depth 8 --yuv $YuvFormat --speed $EncoderSpeed --jobs $EncodingWorkerThreadNumber" +`
-			" $fromFilePath $toFilePath" 
+			" $fromFilePath $toFilePath"
 		$progressSequenceNumberText = $progressTaskProgressFormat -f $progressTaskProgressSequenceNumber
+		#Write-Host $encodeFileCommand
 		Write-Host "[$progressSequenceNumberText/$progressTaskNumberTotal] $relativeFilePath"
 		Invoke-Expression -Command $encodeFileCommand | Out-Null
-	}
+		$progressTaskProgressSequenceNumber = $progressTaskProgressSequenceNumber + 1
+	} |
+	Out-Null
 }
 
 function DoEncoding {
@@ -148,8 +154,7 @@ function DoEncoding {
 
 	Get-ChildItem -Path $inputDirectoryPath -Directory -Recurse |
 	Select-Object -Expand FullName |
-	ForEach-Object { 
-		Write-Host "1 $_"
+	ForEach-Object {
 		$childInputDirectoryPath = $_
 		$relativeChildDirectoryPath = [IO.Path]::GetRelativePath($inputDirectoryPath, $_)
 		$childOutputDirectoryPath = Join-Path -Path $outputDirectoryPath -ChildPath $relativeChildDirectoryPath
@@ -166,12 +171,14 @@ function CreateOutputDirectoryIfNotExist {
 }
 
 function Main {
-	if (PredicatePrerequiste) {
+	if (-not (PredicatePrerequiste)) {
 		Write-Host 'Aborted'; exit
 	}
 
+	"Start at $(Get-Date)" | Write-Host
 	CreateOutputDirectoryIfNotExist
 	DoEncoding
+	"Complete at $(Get-Date)" | Write-Host
 }
 
 Main
