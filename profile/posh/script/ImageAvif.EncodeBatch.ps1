@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-Encode.AvifBatch script do batch encoding jpg/png image files in directory and export to target directory.
+ImageAvif.EncodeBatch script do batch encoding jpg/png image files in directory and export to target directory.
 The directory hierarchy will be kept.
 
 .DESCRIPTION
-Encode.AvifBatch use https://github.com/AOMediaCodec/libavif tools to encoding jpg/png files. The target
+ImageAvif.EncodeBatch use https://github.com/AOMediaCodec/libavif tools to encoding jpg/png files. The target
 directory hierarchy will be kept, some common encoding options can be bypassed to libavif tools.
 
 .PARAMETER EncodingUtilityDirectory
@@ -21,12 +21,12 @@ The argument bypass to avifenc -jobs.
 The argument bypass to avifenc -yuv.
 
 .EXAMPLE
-.\Encode.AvifBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
+.\ImageAvif.EncodeBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
 	-InputDirectory D:\Path\To\Input -OutputDirectory D:\Path\To\Output
 	
 
 .EXAMPLE
-.\Encode.AvifBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
+.\ImageAvif.EncodeBatch.ps1 -EncodingUtilityDirectory C:\Path\To\libavif
 	-InputDirectory D:\Path\To\Input -OutputDirectory D:\Path\To\Output
 	-EncodingWorkderThreadNumber 4 -EncoderSpeed 4
 #>
