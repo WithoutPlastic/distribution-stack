@@ -12,19 +12,18 @@ The mahjong real analyze utility execution file path
 The MajSoul kyoku data file path list
 
 .EXAMPLE
-.\GameMahjong.Analyze.ps1 -AkochanReviewerFilePath C:\Path\To\AkochanPortalExecutionFile.exe
+.\Analyze.ps1 -AkochanReviewerFilePath C:\Path\To\AkochanPortalExecutionFile.exe
     -KyokuFilePathList C:\Path\To\MajSoulKyokuDataA.json,C:\Path\To\MajSoulKyokuDataA.json
 #>
 
 param (
-    [Parameter(Mandatory=$True)]
-    [string[]] $KyokuDataFilePathList,
-    [Parameter(Mandatory=$True)]
-    [string] $AkochanReviewerFilePath
+    [Parameter(Mandatory=$True, Position=0)]
+    [string] $AkochanReviewerFilePath,
+    [Parameter(Mandatory=$True, Position=1, ValueFromRemainingArguments)]
+    [string[]] $RemainingKyokuArgumentS
 )
 
 [string] $akochanReviewerFilePath = $AkochanReviewerFilePath
-[string[]] $kyokuDataFilePathS = $KyokuDataFilePathList
 
 function IsAkochanReviewerFilePathValid {
     Test-Path -Path $akochanReviewerFilePath -IsValid
@@ -39,8 +38,15 @@ function IsMahjongKyokuDataFilePathValid {
         [Parameter(Mandatory=$True)]
         [string] $kyokuDataFilePath
     )
-
     Test-Path -Path $kyokuDataFilePath -IsValid
+}
+
+function IsMahjongKyokuActorIndexValid {
+    param (
+        [Parameter(Mandatory=$True)]
+        [string] $actorIndex
+    )
+    return ($actorIndex -eq '0') -or ($actorIndex -eq '1') -or ($actorIndex -eq '2') -or ($actorIndex -eq '3')
 }
 
 function IsMahjongKyokuDataFileExist {
@@ -48,7 +54,6 @@ function IsMahjongKyokuDataFileExist {
         [Parameter(Mandatory=$True)]
         [string] $kyokuDataFilePath
     )
-
     Test-Path -Path $kyokuDataFilePath
 }
 
@@ -62,23 +67,47 @@ function PredicatePrerequisteAkochanReviewer {
     return $True
 }
 
-function PredicatePrerequisteMahjongKyokuData {
-    $kyokuDataFilePathS |
-    ForEach-Object {
-        if (-not (IsMahjongKyokuDataFilePathValid -kyokuDataFilePath $_)) {
-            Write-Host 'The argument KyokuFilePathList contains some invalid file path'; return $False
-        }
-        if (-not (IsMahjongKyokuDataFileExist -kyokuDataFilePath $_)) {
-            Write-Host "The argument kyoku data file $_ not exist"; return $False
-        }
+function ParseRemainingKyokuArgumentS {
+    param (
+        [Parameter(Mandatory=$True)]
+        [string[]] $argumentS
+    )
+
+    if (($argumentS.Count % 2) -eq 1) {
+        Write-Host 'The argument remaining kyoku arguments format invalid'; return $null
     }
-    return $True
+
+    $kyokuNumber = $argumentS.Count / 2
+    $result = [object[]]::new($kyokuNumber)
+    for ($index = 0; $index -lt $kyokuNumber; $index++) {
+        $currentKyokuDataFilePath = $argumentS[$index * 2]
+        $currentKyokuActorIndex = $argumentS[($index * 2) + 1]
+        if (-not (IsMahjongKyokuDataFilePathValid -kyokuDataFilePath $currentKyokuDataFilePath)) {
+            Write-Host "The argument kyoku data file path $currentKyokuDataFilePath invalid"; return $null
+        }
+        if (-not (IsMahjongKyokuDataFileExist -kyokuDataFilePath $currentKyokuDataFilePath)) {
+            Write-Host "The kyoku data file $currentKyokuDataFilePath not exist"; return $null
+        }
+        if (-not (IsMahjongKyokuActorIndexValid -actorIndex $currentKyokuActorIndex)) {
+            Write-Host "The argument kyoku actor index $currentKyokuActorIndex invalid"; return $null
+        }
+        $result[$index] = [System.Tuple]::Create($argumentS[$index * 2], $argumentS[($index * 2) + 1])
+    }
+    return $result
 }
 
 function DoAnalyze {
-    $kyokuDataFilePathS |
+    param (
+        [Parameter(Mandatory=$True)]
+        [System.Tuple`2[string, string]] $akochanKyokuArgumentSetS
+    )
+
+    $akochanKyokuArgumentSetS |
     ForEach-Object {
-        $analyzeCommand = ". '$akochanReviewerFilePath' --actor 3 --in-file $_ --lang en"
+        $kyokuDataFilePath = $_.Item1
+        $actorIndex = $_.Item2
+        $analyzeCommand = ". '$akochanReviewerFilePath' --in-file $kyokuDataFilePath --actor $actorIndex --lang en --without-viewer --deviation-threshold 0.1"
+        Write-Host $analyzeCommand
         Invoke-Expression -Command $analyzeCommand
     }
 }
@@ -87,7 +116,9 @@ function Main {
     if (-not (PredicatePrerequisteAkochanReviewer)) {
         Write-Host 'Aborted'; exit
     }
-    if (-not (PredicatePrerequisteMahjongKyokuData)) {
+
+    $akochanKyokuArgumentSetS = ParseRemainingKyokuArgumentS -argumentS $RemainingKyokuArgumentS
+    if ($null -eq $akochanKyokuArgumentSetS) {
         Write-Host 'Aborted'; exit
     }
 
@@ -95,7 +126,7 @@ function Main {
 
     "Start at $(Get-Date)" | Write-Host
     (Get-Item $AkochanReviewerFilePath).Directory.FullName | Set-Location
-    DoAnalyze
+    DoAnalyze -akochanKyokuArgumentSetS $akochanKyokuArgumentSetS
     Set-Location -Path $originalWorkingDirectory
     "Complete at $(Get-Date)" | Write-Host
 }
