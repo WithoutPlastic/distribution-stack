@@ -1,0 +1,5 @@
+Ox00 Check dotnet nuget list source
+\> dotnet nuget list source
+
+0x01 Add nuget.org source if not added
+\> dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
