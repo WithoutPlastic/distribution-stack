@@ -125,12 +125,10 @@ set laststatus=2
 
 if &term == "rxvt-unicode-256color"
   set t_Co=256
-  colorscheme lucius
-  LuciusBlack
-elseif (&term == "xterm" || &term == "screen" || &term == "screen-256color")
+  colorscheme torte
+elseif (&term == "xterm" || &term == "screen" || &term == "screen-256color" || &term == "xterm-256color")
   set t_Co=256
-  colorscheme lucius
-  LuciusBlack
+  colorscheme torte
 else
   set t_Co=8
   colorscheme torte
