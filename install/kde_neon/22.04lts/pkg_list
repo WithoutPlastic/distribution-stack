@@ -1,0 +1,143 @@
+# kde
+transmission qtorrent krita
+
+# browser
+firefox ungoogled-chromium
+
+# mail
+thunderbird
+
+# media
+vlc
+
+# shell
+zsh tmux
+
+# dotnet
+dotnet-runtime-8.0
+dotnet-sdk-8.0
+
+# input sync
+barrier
+
+# ssh
+ssh
+
+# input method
+fcitx5 fcitx5-frontend-gtk3 fcitx5-frontend-gtk4 fcitx5-frontend-qt5 fcitx5-frontend-qt6 fcitx5-chinese-addons
+
+
+#
+#
+#
+#
+#
+# kde
+ktorrent kate kolourpaint kde-partition-manager
+
+# remote control
+
+synergy ssh
+
+# transmission centric
+wget rsync socat
+
+# web
+icoutils libssl-dev nginx lighttpd
+
+# useless but fun
+cowsay figlet
+
+# editor
+emacs25
+
+#package manager
+apt-transport-manager
+
+# version control
+git subversion mercurial
+
+# shell / terminal
+mosh rxvt-unicode fish
+github.com/elves/elvish
+
+# system admin
+sysstat htop
+
+# instant message
+irssi xchat-gnome
+
+# desktop
+xclip dconf-tools
+
+# disk / filesystem
+tree exfat-fuse exfat-utils ntfs-3g parted gparted
+
+# database sql
+postgresql
+
+# database no-sql
+mongodb
+
+# cache
+memcached redis-server redis-tools
+
+# ftp
+vsftpd lftp filezilla
+
+# container
+docker docker.io
+
+# media player
+mplayer pepperflashplugin-nonfree
+
+# codecs
+libwebp6 ffmpeg
+
+libheif-tools libheif-dev
+
+# network
+wireshark tshark iperf mtr
+
+# hardware
+psensor
+
+# programming lang
+ghc
+perl
+ruby
+lua5.2 lua5.3
+erlang elixir
+clisp racket guile-2.2
+openjdk-14-jdk scala
+build-essential llvm-10 strace sysdig cmake
+javascript-common npm nodejs
+
+# unicode
+uniutils
+
+# fonts
+fonts-wqy-microhei fonts-wqy-zenhei fonts-dejavu
+
+# computing
+scilab
+
+# ebook
+calibre
+
+# geographic tools
+gmt gdal-bin
+
+# crypto
+libdigest-sha3-perl
+hashto?
+
+# graphic
+geomview graphicsmagick octave graphviz gimp inkscape gthumb
+
+# input method
+# Gnome 3/Wayland not support fcitx
+#fcitx fcitx-pinyin fcitx-libpinyin fcitx-anthy
+
+# KDE
+partitionmanager
