@@ -1,3 +1,8 @@
-#Import-Module posh-git
+# Initialize posh-git
+# Import-Module posh-git
 
+# Command Alias
 #New-Alias -Name nvim -Value '<\Path\To\Executable\File>'
+
+# Go Programming Language Environment
+#$env:GOPROXY = "https://goproxy.io,direct"
