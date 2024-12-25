@@ -5,8 +5,9 @@
     signingkey = <gpg-key>
 [core]
     editor = vim
-    pager = /usr/bin/less
+    #pager = /usr/bin/less
     whitespace = cr-at-eol
+    #autocrlf = true/input/false
     #excludesfile = ~/.gitignore
 [color]
     diff = auto
